@@ -1,12 +1,15 @@
 package data;
 
+import java.util.Random;
+
 public class ClienteApressado extends Cliente {
-    public ClienteApressado(String nome) {
-        super(nome);
+    private Random rand = new Random();
+    public ClienteApressado() {
+        super(ClienteGen.gerarNome());
     }
 
     @Override
     public String comportamento() {
-        return "Vai demorar muito? Preciso rápido!";
+        return FrasesClientes.getFrase("apressado");
     }
 }

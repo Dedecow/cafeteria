@@ -1,10 +1,13 @@
 package engine;
 
+import java.util.LinkedList;
+import java.util.Queue;
 import data.Cliente;
-import data.ClienteApressado;
+import data.ClienteGen;
 import view.*;
 
 public class Jogo {
+    private Queue<Cliente> filaClientes = new LinkedList<>();
     private int pontos = 0;
     private Cliente clienteAtual;
 
@@ -13,8 +16,12 @@ public class Jogo {
     }
 
     public void gerarPedido() {
-        clienteAtual = new ClienteApressado("Carlos");
+        clienteAtual = ClienteGen.gerarClienteRandom();
         new TelaJogo(this, clienteAtual);
+    }
+    public void proximoPedido(){
+        clienteAtual = ClienteGen.gerarClienteRandom();
+        new TelaJogo(this,clienteAtual);
     }
 
     public void processarPedido(boolean correto) {

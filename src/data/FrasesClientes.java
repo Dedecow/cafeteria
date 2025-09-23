@@ -31,15 +31,15 @@ public class FrasesClientes {
             "Acho que vou precisar de mais tempo para pensar."
     };
 
-    public static String getFrase(String tipo){
-        switch (tipo.toLowerCase()){
-            case "apressado":
+    public static String getFrase(TipoDeCliente tipo){
+        switch (tipo){
+            case APRESSADO:
                 return APRESSADO[rand.nextInt(APRESSADO.length)];
-            case "calmo":
+            case CALMO:
                 return CALMO[rand.nextInt(CALMO.length)];
-            case "exigente":
+            case EXIGENTE:
                 return EXIGENTE[rand.nextInt(EXIGENTE.length)];
-            case "indeciso":
+            case INDECISO:
                 return INDECISO[rand.nextInt(INDECISO.length)];
             default:
                 return "Cliente sem frase definida";

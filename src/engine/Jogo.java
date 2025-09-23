@@ -1,19 +1,19 @@
 package engine;
 
 import data.Cardapio;
-import data.MenuItem;
-
-import java.awt.*;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
-import java.util.Random;
-
 import data.Cliente;
 import data.ClienteGen;
-import view.*;
+import data.MenuItem;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.Map;
+import java.util.Queue;
+import java.util.Random;
+import view.TelaGameOver;
+import view.TelaInicial;
+import view.TelaJogo;
+import view.TelaPreparo;
+import view.TelaResultado;
 
 
 public class Jogo {
@@ -24,43 +24,36 @@ public class Jogo {
 
     private int pontos = 0;
     private Cliente clienteAtual;
+    private MenuItem pedidoAtual;
 
     public void iniciarJogo() {
-        Cliente clienteAtual = ClienteGen.gerarClienteRandom();
         new TelaInicial(this);
     }
 
-    public MenuItem gerarPedidoRand() {
-        List<MenuItem> menu = Cardapio.getMenu();
-        int index = random.nextInt(menu.size());
-        return menu.get(index);
+    public void gerarProximoCliente() {
+        this.clienteAtual = ClienteGen.gerarClienteRandom();
+        this.pedidoAtual = Cardapio.getMenu().get(random.nextInt(Cardapio.getMenu().size()));
+        this.clienteAtual.setPedido(this.pedidoAtual);
+
+        new TelaJogo(this, this.clienteAtual);
     }
-
-    public void gerarPedido() {
-        clienteAtual = ClienteGen.gerarClienteRandom();
-        MenuItem pedido = Cardapio.getMenu().get(random.nextInt(Cardapio.getMenu().size()));
-
-        // associa cliente ao pedido
-
-        System.out.println(clienteAtual.getNome() + "pediu: " + pedido.getName());
-
-        new TelaPreparo(this, clienteAtual, pedido);
-    }
-
-    public void proximoPedido(){
-        clienteAtual = ClienteGen.gerarClienteRandom();
-        new TelaJogo(this,clienteAtual);
+    
+    public void iniciarPreparo() {
+        new TelaPreparo(this, this.clienteAtual, this.pedidoAtual);
     }
 
     public void processarPedido(boolean correto) {
-        if (correto) pontos += 10; else pontos -= 5;
+        if (correto) {
+            pontos += 10;
+        } else {
+            pontos -= 5;
+        }
 
         if (pontos <= 0){
             pontos = 0;
             new TelaGameOver(this);
-        }
-        else {
-            new TelaResultado(this,correto,pontos);
+        } else {
+            new TelaResultado(this, correto, pontos);
         }
     }
 

@@ -7,6 +7,6 @@ public class ClienteCalmo extends Cliente {
 
     @Override
     public String comportamento() {
-        return FrasesClientes.getFrase("calmo");
+        return FrasesClientes.getFrase(TipoDeCliente.CALMO);
     }
 }

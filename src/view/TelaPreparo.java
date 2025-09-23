@@ -1,12 +1,11 @@
 package view;
 import data.Cliente;
-import data.MenuItem;
 import data.Ingrediente;
+import data.MenuItem;
 import engine.Jogo;
-
-import javax.swing.*;
 import java.awt.*;
 import java.util.List;
+import javax.swing.*;
 
 public class TelaPreparo extends  JFrame{
     private int etapaAtual = 0;
@@ -42,14 +41,11 @@ public class TelaPreparo extends  JFrame{
                 JOptionPane.showMessageDialog(this,
                         item.getName() + " Preparado com sucesso!");
                 dispose();
-
-
-                jogo.proximoPedido();
+                jogo.processarPedido(true);
             }
-
         });
-
+        
+        add(painel);
+        setVisible(true);
     }
-
-
 }

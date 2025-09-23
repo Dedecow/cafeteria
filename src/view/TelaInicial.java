@@ -42,8 +42,7 @@ public class TelaInicial extends JFrame {
         
         btnIniciar.addActionListener(e -> {
             dispose();
-            jogo.gerarPedido();
-            jogo.proximoPedido();
+            jogo.gerarProximoCliente();
         });
 
         contentPane.add(btnIniciar);

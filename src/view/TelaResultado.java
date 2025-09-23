@@ -1,8 +1,8 @@
 package view;
 
 import engine.Jogo;
-import javax.swing.*;
 import java.awt.*;
+import javax.swing.*;
 
 public class TelaResultado extends JFrame {
     public TelaResultado(Jogo jogo, boolean correto, int pontos) {
@@ -16,7 +16,7 @@ public class TelaResultado extends JFrame {
         JButton btnProximo = new JButton("Próximo Cliente");
         btnProximo.addActionListener(e -> {
             dispose();
-            jogo.gerarPedido();
+            jogo.gerarProximoCliente();
         });
 
         JPanel panel = new JPanel();

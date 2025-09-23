@@ -7,6 +7,6 @@ public class ClienteApressado extends Cliente {
 
     @Override
     public String comportamento() {
-        return FrasesClientes.getFrase("apressado");
+        return FrasesClientes.getFrase(TipoDeCliente.APRESSADO);
     }
 }

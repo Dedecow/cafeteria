@@ -7,6 +7,6 @@ public class ClienteExigente extends Cliente {
 
     @Override
     public String comportamento(){
-        return FrasesClientes.getFrase("exigente");
+        return FrasesClientes.getFrase(TipoDeCliente.EXIGENTE);
     }
 }

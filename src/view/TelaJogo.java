@@ -12,12 +12,12 @@ public class TelaJogo extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         JLabel lblPedido = new JLabel(cliente.getNome() + " diz: " + cliente.comportamento());
-        JButton btnAcertar = new JButton("Escolher ingredientes corretos");
-        JButton btnErrar = new JButton("Errar ingredientes");
+        JButton btnAcertar = new JButton("Iniciar Preparo");
+        JButton btnErrar = new JButton("Errar o Pedido");
 
         btnAcertar.addActionListener(e -> {
             dispose();
-            jogo.processarPedido(true);
+            jogo.iniciarPreparo();
         });
 
         btnErrar.addActionListener(e -> {

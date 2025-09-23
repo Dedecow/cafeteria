@@ -1,8 +1,8 @@
 package data;
 
-public class ClienteExigente extends ClienteApressado {
+public class ClienteExigente extends Cliente {
     public ClienteExigente() {
-        super();
+        super(ClienteGen.gerarNome());
     }
 
     @Override

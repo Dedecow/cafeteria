@@ -2,8 +2,10 @@ package data;
 import java.util.Random;
 
 
+
 public class ClienteGen {
-    Random gerador = new Random();
+    private static Random rand = new Random();
+    
     private static final String[] nomes = {"Maria", "João", "Ana", "Pedro", "Sofia", "Lucas"};
 
     private static final Random GERADOR = new Random();

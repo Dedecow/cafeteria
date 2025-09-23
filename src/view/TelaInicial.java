@@ -1,8 +1,8 @@
 package view;
 
 import engine.Jogo;
-import javax.swing.*;
 import java.awt.*;
+import javax.swing.*;
 
 public class TelaInicial extends JFrame {
     public TelaInicial(Jogo jogo) {
@@ -10,7 +10,7 @@ public class TelaInicial extends JFrame {
         setSize(300,200);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-        JButton btnIniciar = new JButton("Iniciar Jogo");
+        JButton btnIniciar = new JButton("Bem vindo ao JavaBeans! Clique para iniciar.");
         btnIniciar.addActionListener(e -> {
             dispose();
             jogo.gerarPedido();

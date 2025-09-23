@@ -1,10 +1,9 @@
 package view;
 
-import engine.Jogo;
 import data.Cliente;
-
-import javax.swing.*;
+import engine.Jogo;
 import java.awt.*;
+import javax.swing.*;
 
 public class TelaJogo extends JFrame {
     public TelaJogo(Jogo jogo, Cliente cliente) {
@@ -13,8 +12,8 @@ public class TelaJogo extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         JLabel lblPedido = new JLabel(cliente.getNome() + " diz: " + cliente.comportamento());
-        JButton btnAcertar = new JButton("Entregar Correto");
-        JButton btnErrar = new JButton("Entregar Errado");
+        JButton btnAcertar = new JButton("Escolher ingredientes corretos");
+        JButton btnErrar = new JButton("Errar ingredientes");
 
         btnAcertar.addActionListener(e -> {
             dispose();

@@ -2,7 +2,7 @@ package cafeteria;
 import engine.Jogo;
 /**
  *
- * @author Dedecow
+ * @author Dedecow, PatrickmirandaDev e deboraerhart
  */
 public class Cafeteria {
 

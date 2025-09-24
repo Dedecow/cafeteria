@@ -1,7 +1,7 @@
 package data;
 
 public class ClienteCalmo extends Cliente {
-    public ClienteCalmo(){
+    public ClienteCalmo(String nome, MenuItem pedido){
         super(ClienteGen.gerarNome());
     }
 

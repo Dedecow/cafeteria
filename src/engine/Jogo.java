@@ -15,13 +15,10 @@ import view.TelaJogo;
 import view.TelaPreparo;
 import view.TelaResultado;
 
-
 public class Jogo {
     private Random random = new Random();
     private Queue<Cliente> filaClientes = new LinkedList<>();
-
     private Map<Cliente, MenuItem> pedidos = new HashMap<>();
-
     private int pontos = 0;
     private Cliente clienteAtual;
     private MenuItem pedidoAtual;
@@ -35,11 +32,13 @@ public class Jogo {
         this.pedidoAtual = Cardapio.getMenu().get(random.nextInt(Cardapio.getMenu().size()));
         this.clienteAtual.setPedido(this.pedidoAtual);
 
-        new TelaJogo(this, this.clienteAtual);
+        new TelaJogo(this, this.clienteAtual, this.pedidoAtual);
     }
     
-    public void iniciarPreparo() {
-        new TelaPreparo(this, this.clienteAtual, this.pedidoAtual);
+    public void iniciarPreparo(Cliente cliente, MenuItem pedido) {
+        this.clienteAtual = cliente;
+        this.pedidoAtual = pedido;
+        new TelaPreparo(this, pedidoAtual.getName());
     }
 
     public void processarPedido(boolean correto) {
@@ -51,7 +50,7 @@ public class Jogo {
 
         if (pontos <= 0){
             pontos = 0;
-            new TelaGameOver(this);
+            new TelaGameOver(pontos);
         } else {
             new TelaResultado(this, correto, pontos);
         }

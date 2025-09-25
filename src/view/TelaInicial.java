@@ -2,52 +2,39 @@ package view;
 
 import engine.Jogo;
 import java.awt.*;
-import java.net.URL;
 import javax.swing.*;
 
 public class TelaInicial extends JFrame {
     public TelaInicial(Jogo jogo) {
-        setTitle("JavaBeans - Start");
-        setSize(800,600);
+        setTitle("JavaBeans - Tela Inicial");
+        setSize(600, 400);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setLocationRelativeTo(null);
 
-        JLabel background = new JLabel();
-        try {
-            URL imageUrl = getClass().getResource("/assets/cafe_background.png");
-            if (imageUrl != null) {
-                ImageIcon originalIcon = new ImageIcon(imageUrl);
-                Image img = originalIcon.getImage();
-                Image scaledImg = img.getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_SMOOTH);
-                background.setIcon(new ImageIcon(scaledImg));
-            } else {
-                System.err.println("Imagem de fundo não encontrada em: /assets/cafe_background.png");
-            }
-        } catch (Exception e) {
-            System.err.println("Erro ao carregar imagem de fundo: " + e.getMessage());
-        }
+        // Usa imagem específica para tela inicial
+        BackgroundPanel background = new BackgroundPanel("/assets/cafe_background.png");
 
-        this.setContentPane(background);
+        background.setLayout(new BorderLayout());
 
-        JPanel contentPane = new JPanel(new GridBagLayout());
-        contentPane.setOpaque(false);
+        JLabel lblTitulo = new JLabel("☕ JavaBeans Cafeteria", SwingConstants.CENTER);
+        lblTitulo.setFont(new Font("Arial", Font.BOLD, 28));
+        lblTitulo.setForeground(Color.WHITE);
 
-
-        JButton btnIniciar = new JButton("<html><div style='text-align: center;'>Iniciar Jogo</div></html>");
-        btnIniciar.setFont(new Font("Arial", Font.BOLD, 20));
-        btnIniciar.setForeground(new Color(139, 69, 19));
-        btnIniciar.setBackground(new Color(255, 255, 255, 150));
-        btnIniciar.setBorderPainted(false);
-        btnIniciar.setFocusPainted(false);
-        
+        JButton btnIniciar = new JButton("Iniciar Jogo");
+        btnIniciar.setFont(new Font("Arial", Font.BOLD, 16));
         btnIniciar.addActionListener(e -> {
             dispose();
             jogo.gerarProximoCliente();
         });
 
-        contentPane.add(btnIniciar);
-        background.setLayout(new BorderLayout());
-        background.add(contentPane, BorderLayout.CENTER);
+        JPanel centro = new JPanel(new BorderLayout());
+        centro.setOpaque(false);
+        centro.add(lblTitulo, BorderLayout.CENTER);
+
+        background.add(centro, BorderLayout.CENTER);
+        background.add(btnIniciar, BorderLayout.SOUTH);
+
+        setContentPane(background);
+        setLocationRelativeTo(null);
         setVisible(true);
     }
 }

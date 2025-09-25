@@ -1,51 +1,46 @@
 package view;
-import data.Cliente;
-import data.Ingrediente;
-import data.MenuItem;
+
 import engine.Jogo;
 import java.awt.*;
-import java.util.List;
 import javax.swing.*;
 
-public class TelaPreparo extends  JFrame{
-    private int etapaAtual = 0;
-    private final List<Ingrediente> ingredientes;
-    private final MenuItem item;
+public class TelaPreparo extends JFrame {
+    public TelaPreparo(Jogo jogo, String pedido) {
+        setTitle("JavaBeans - Preparando " + pedido);
+        setSize(600, 400);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-    public TelaPreparo(Jogo jogo, Cliente clienteAtual, MenuItem item) {
-        this.item = item;
-        this.ingredientes = item.getIngredientes();
+        // Usa imagem específica para tela de preparo
+        BackgroundPanel background = new BackgroundPanel("/assets/cafe_telapreparo_e_resultado.jpg");
 
-        setTitle("Preparando: "+ item.getName());
-        setSize(600,400);
-        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-        setLocationRelativeTo(null);
+        background.setLayout(new BorderLayout());
 
-        JPanel painel = new JPanel(new BorderLayout());
+        JLabel lblPedido = new JLabel("Preparando: " + pedido, SwingConstants.CENTER);
+        lblPedido.setFont(new Font("Arial", Font.BOLD, 18));
+        lblPedido.setForeground(Color.WHITE);
 
-        JLabel lblEtapa = new JLabel("Pegue "+ ingredientes.get(etapaAtual).getName(),
-                SwingConstants.CENTER);
-        lblEtapa.setFont(new Font("Arial",Font.BOLD,18));
-        painel.add(lblEtapa, BorderLayout.CENTER);
-
-        JButton btnProximo = new JButton("Proxima Etapa");
-        btnProximo.setFont(new Font("Arial",Font.BOLD,18));
-        painel.add(btnProximo, BorderLayout.SOUTH);
-
-        btnProximo.addActionListener(e -> {
-            etapaAtual++;
-            if (etapaAtual < ingredientes.size()) {
-                lblEtapa.setText("Adicione "+ ingredientes.get(etapaAtual).getName());
-
-            }else {
-                JOptionPane.showMessageDialog(this,
-                        item.getName() + " Preparado com sucesso!");
-                dispose();
-                jogo.processarPedido(true);
-            }
+        JButton btnFinalizar = new JButton("Finalizar Preparo");
+        btnFinalizar.addActionListener(e -> {
+            dispose();
+            jogo.processarPedido(true);
         });
-        
-        add(painel);
+
+        JButton btnErrar = new JButton("Errar Preparo");
+        btnErrar.addActionListener(e -> {
+            dispose();
+            jogo.processarPedido(false);
+        });
+
+        JPanel botoes = new JPanel();
+        botoes.setOpaque(false);
+        botoes.add(btnFinalizar);
+        botoes.add(btnErrar);
+
+        background.add(lblPedido, BorderLayout.CENTER);
+        background.add(botoes, BorderLayout.SOUTH);
+
+        setContentPane(background);
+        setLocationRelativeTo(null);
         setVisible(true);
     }
 }

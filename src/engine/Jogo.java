@@ -3,10 +3,9 @@ package engine;
 import data.Cardapio;
 import data.Cliente;
 import data.ClienteGen;
-import data.MenuItem;
 import data.IPersistencia;
+import data.MenuItem;
 import data.PersistenciaLocal;
-
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
@@ -30,10 +29,7 @@ public class Jogo {
     private MenuItem pedidoAtual;
 
     private IPersistencia persistencia = new PersistenciaLocal(); 
-    
-    // LINHA PARA FUTURA MIGRAÇÃO PARA AZURE (COMENTADA POR ENQUANTO):
-    // private IPersistencia persistencia = new PersistenciaAzure("SUA_CONNECTION_STRING_AQUI"); 
-
+    //private IPersistencia persistencia = new PersistenciaTableStorage(System.getenv("STORAGE_CONNECTION_STRING"));
 
     public void iniciarJogo() {
         new TelaInicial(this);

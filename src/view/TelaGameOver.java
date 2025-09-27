@@ -1,5 +1,6 @@
 package view;
 
+import engine.Jogo;
 import java.awt.*;
 import javax.swing.*;
 
@@ -36,5 +37,9 @@ public class TelaGameOver extends JFrame {
         setContentPane(background);
         setLocationRelativeTo(null);
         setVisible(true);
+    }
+
+    public TelaGameOver(Jogo jogo, int pontos) {
+        //TODO Auto-generated constructor stub
     }
 }

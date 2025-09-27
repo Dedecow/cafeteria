@@ -1,11 +1,10 @@
 package view;
 
-import engine.Jogo;
 import java.awt.*;
 import javax.swing.*;
 
 public class TelaResultado extends JFrame {
-    public TelaResultado(Jogo jogo, boolean acerto, int pontos) {
+    public TelaResultado(engine.Jogo jogo, boolean acerto, int pontos) {
         setTitle("JavaBeans - Resultado");
         setSize(600, 400);
         setDefaultCloseOperation(EXIT_ON_CLOSE);

@@ -10,7 +10,7 @@ public class Cardapio {
             new Ingrediente("Leite"),
             new Ingrediente("Acucar"),
             new Ingrediente("Cacau"),
-            new Ingrediente("Matcha") // Corrigido: estava "matcha" no array mas "Matcha" no item
+            new Ingrediente("Matcha")
     );
 
     private static final List<MenuItem> menu = Arrays.asList(

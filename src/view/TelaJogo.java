@@ -16,21 +16,21 @@ public class TelaJogo extends JFrame {
         BackgroundPanel background = new BackgroundPanel("/assets/cafe_telajogo.jpg");
         background.setLayout(new BorderLayout());
 
-        JLabel lblCliente = new JLabel(cliente.getNome() + " pediu: " + pedido.getName(), SwingConstants.CENTER);
-        lblCliente.setFont(new Font("Arial", Font.BOLD, 18));
-        lblCliente.setForeground(Color.WHITE);
+        // USE A CLASSE OutlineLabel AQUI para os dois textos
         
-        JLabel lblComportamento = new JLabel(cliente.comportamento(), SwingConstants.CENTER);
-        lblComportamento.setFont(new Font("Arial", Font.ITALIC, 14));
-        lblComportamento.setForeground(Color.YELLOW);
+        OutlineLabel lblCliente = new OutlineLabel(cliente.getNome() + " pediu: " + pedido.getName());
+        lblCliente.setFont(new Font("Arial", Font.BOLD, 18));
+        
+        OutlineLabel lblComportamento = new OutlineLabel(cliente.comportamento());
+        lblComportamento.setFont(new Font("Arial", Font.PLAIN, 20));
 
+        // As linhas para adicionar os botões e os rótulos no painel continuam as mesmas
         JPanel botoes = new JPanel();
         botoes.setOpaque(false);
         
         JButton btnPreparo = new JButton("Iniciar Preparo");
         btnPreparo.addActionListener(e -> {
             dispose();
-
             jogo.iniciarPreparo();
         });
         

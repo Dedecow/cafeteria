@@ -1,47 +1,53 @@
 # ----------------------------------------
-# 1. Arquivos de Compilação Java/IDE
+# Arquivos Específicos Solicitados (TESTE)
+# ----------------------------------------
+
+# Arquivos de dados gerados que estavam causando conflitos
+historico_pedidos.csv
+
+# Arquivos de projeto/build específicos da sua pasta
+# Cuidado: Se 'build.xml' for a sua definição de build principal, pode ser necessário versioná-lo.
+build.xml
+manifest.mf
+
+# Arquivo de módulo do IntelliJ/IDE
+cafeteria.iml
+
+# ----------------------------------------
+# 1. Pastas e Arquivos de Build Java
 # ----------------------------------------
 
 # Ignora pastas de saída de compilação
 /bin/
 /build/
 /dist/
+/target/
 
-# Ignora arquivos de classes compiladas
+# Ignora arquivos de classes compiladas e pacotes
 *.class
+*.jar
+*.war
+*.ear
 
 # ----------------------------------------
-# 2. Configurações da IDE (NetBeans, VS Code, IntelliJ)
+# 2. Configurações de IDE (Gerais)
 # ----------------------------------------
 
-# NetBeans - Comum em projetos Java (Ignora arquivos de projeto temporários/privados)
-/nbproject/private/
-/nbproject/build-impl.xml
-
-# IntelliJ/Android Studio (Arquivos de projeto)
-.idea/
+# IntelliJ e Outras IDEs baseadas em .iml
 *.iml
 *.iws
 *.ipr
 
-# Visual Studio Code (Configurações de workspace)
+# Visual Studio Code
+# Configurações do workspace (pode ser necessário remover o .vscode/settings.json se quiser compartilhar)
 .vscode/
 
-# ----------------------------------------
-# 3. Arquivos Temporários de Dados
-# ----------------------------------------
+# Eclipse
+.project
+.classpath
+.settings/
 
-# Ignora arquivos de dados gerados que não devem ser versionados.
-# O Git estava protegendo 'historico_pedidos.csv' antes.
-historico_pedidos.csv
-
-# ----------------------------------------
-# 4. Outros Arquivos
-# ----------------------------------------
-
-# Arquivos do sistema operacional
-.DS_Store
-Thumbs.db
-
-# Arquivos temporários
-*~
+# NetBeans
+# Pasta privada do projeto (arquivos temporários)
+/nbproject/private/
+/nbproject/build-impl.xml

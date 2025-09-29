@@ -17,3 +17,85 @@ b7506ef6-e980-4885-92eb-a8276f20dc88, Lucas, Matcha, false, 0, Mon Sep 29 06:50:
 2b4ff778-0fb8-4073-8426-acf5925aceab, Ana, Matcha, true, 10, Mon Sep 29 11:25:54 GMT-03:00 2025
 a3c9a33f-4d0d-4f39-8bd0-ff151fa466fb, Sofia, capuccino, false, 5, Mon Sep 29 11:26:02 GMT-03:00 2025
 8032903a-7395-4d9d-908d-02ede647e375, Lucas, capuccino, false, 0, Mon Sep 29 11:26:13 GMT-03:00 2025
+4e960c59-96cf-4f1e-937f-5e994db13b5e, João, Cafe latte, false, -5, Mon Sep 29 12:03:36 GMT-03:00 2025
+a62e8f7f-414d-456b-b3a3-02faacbf7fdb, Maria, capuccino, false, -5, Mon Sep 29 12:07:37 GMT-03:00 2025
+80646045-bb9c-4d75-a307-70c1aa5eb944, Sofia, Matcha, false, -5, Mon Sep 29 12:08:27 GMT-03:00 2025
+fdc64d3b-e74b-4dab-956c-84d2b4b9920d, Ana, capuccino, false, -5, Mon Sep 29 12:08:37 GMT-03:00 2025
+d89c21b1-b6ec-4023-a323-0fc4ae2c0bd1, Pedro, Cafe latte, false, -5, Mon Sep 29 12:13:07 GMT-03:00 2025
+abca086e-bb89-480a-bc08-1ce6ac89f690, Sofia, Matcha, false, -5, Mon Sep 29 12:13:12 GMT-03:00 2025
+2f49d5db-f8be-4465-b0b9-9907f246b35a, João, Cafe preto, false, -5, Mon Sep 29 12:13:19 GMT-03:00 2025
+c14fed3e-2799-4507-9ad4-d1b0ec64266e, Maria, capuccino, false, -5, Mon Sep 29 12:13:33 GMT-03:00 2025
+3db0d9ba-bc68-4823-a45a-01fa26267044, Pedro, Cafe latte, false, -5, Mon Sep 29 12:13:41 GMT-03:00 2025
+a6b2f87d-11e9-47e3-aa9b-a075ff8fd099, Sofia, capuccino, false, -5, Mon Sep 29 12:13:51 GMT-03:00 2025
+2c864ae8-e012-46a0-889f-62c26d32d826, Ana, capuccino, false, -5, Mon Sep 29 12:14:01 GMT-03:00 2025
+3008dad1-bb81-4177-af82-dba8a19c3b74, Maria, Cafe preto, true, 10, Mon Sep 29 12:14:10 GMT-03:00 2025
+0aa2ac5f-d4a7-48b9-95d3-83f0d0fe6e38, Ana, Cafe latte, true, 10, Mon Sep 29 12:14:58 GMT-03:00 2025
+64332c92-1739-4a83-bf6d-4315701ee9ee, Pedro, Matcha, true, 10, Mon Sep 29 12:15:58 GMT-03:00 2025
+e8847b02-539a-4a75-8fba-7e1f5d5cd1ba, João, Cafe latte, false, -5, Mon Sep 29 12:16:18 GMT-03:00 2025
+9706b632-78ef-4ff7-87cb-a525eeded162, Ana, Matcha, true, 10, Mon Sep 29 12:16:28 GMT-03:00 2025
+07fb22b1-a1cd-4953-b6f2-815003ca9a03, Lucas, Matcha, true, 20, Mon Sep 29 12:16:35 GMT-03:00 2025
+7febb783-9684-4868-8b9e-c64b566cc28a, Maria, Cafe latte, false, 15, Mon Sep 29 12:16:44 GMT-03:00 2025
+63e3b87c-a5b6-4d55-b6b3-a46412c72858, Ana, Matcha, true, 25, Mon Sep 29 12:16:49 GMT-03:00 2025
+63f568b6-fdeb-4cb5-9a17-c2de53030ef4, Sofia, Cafe latte, true, 10, Mon Sep 29 12:54:56 GMT-03:00 2025
+51e19d35-c59f-4dfb-b40d-77d659471675, Lucas, Cafe latte, true, 10, Mon Sep 29 12:57:17 GMT-03:00 2025
+8fda4db4-6a03-4d31-a1a1-51c073c9ed18, Pedro, Cafe preto, true, 20, Mon Sep 29 12:57:22 GMT-03:00 2025
+776e7d1e-0e19-4a45-ba21-a4e1cfae4b14, João, Cafe latte, true, 30, Mon Sep 29 12:57:27 GMT-03:00 2025
+70f8b504-ddff-4c2f-ba46-e610eb105115, Sofia, Matcha, true, 40, Mon Sep 29 12:57:31 GMT-03:00 2025
+9b564901-fe8f-48cf-8aee-b309c6df0cb5, Ana, Cafe preto, true, 50, Mon Sep 29 12:57:34 GMT-03:00 2025
+3f94b0d1-74d2-446e-a6f0-9b212459e8a4, Ana, Cafe latte, true, 60, Mon Sep 29 12:57:38 GMT-03:00 2025
+f907312e-fba9-4acf-a93a-bcc273b8ac23, Sofia, Matcha, true, 70, Mon Sep 29 12:57:42 GMT-03:00 2025
+6d8b563e-557d-441b-91f7-1c7bff877cfe, Sofia, Matcha, true, 80, Mon Sep 29 12:57:46 GMT-03:00 2025
+6d4da34f-6984-4156-9265-1a7afd87ddba, Sofia, Matcha, true, 90, Mon Sep 29 12:57:49 GMT-03:00 2025
+6c794224-d6ca-48dc-9a64-7942b75ca26a, Maria, capuccino, true, 100, Mon Sep 29 12:57:57 GMT-03:00 2025
+d7987f3c-1f9c-4770-8b10-690fa48b9434, Ana, Matcha, true, 10, Mon Sep 29 13:01:50 GMT-03:00 2025
+820bef31-5a16-4b1d-98ea-860d0c629324, Lucas, Cafe preto, true, 20, Mon Sep 29 13:02:00 GMT-03:00 2025
+6bd4a84b-d5c2-41f3-976c-fb019afd2436, João, capuccino, true, 10, Mon Sep 29 13:02:32 GMT-03:00 2025
+e98fea7a-8ed0-49be-9780-ff73b2731ad9, Pedro, Cafe preto, false, 5, Mon Sep 29 13:02:37 GMT-03:00 2025
+b9a4db3e-bd2e-425a-9e51-0ceacf631758, Ana, Cafe preto, true, 15, Mon Sep 29 13:02:49 GMT-03:00 2025
+7aae8da5-1abb-4829-9fe0-35febdd4fa0f, Maria, Matcha, false, -5, Mon Sep 29 13:04:51 GMT-03:00 2025
+e7b8089b-eba7-486b-95df-a91277d698be, Lucas, Cafe latte, true, 10, Mon Sep 29 13:05:04 GMT-03:00 2025
+46dc2179-0509-4d65-9a7d-b7e3ffdf77a4, Pedro, Matcha, true, 10, Mon Sep 29 13:08:10 GMT-03:00 2025
+600e6ee6-ff23-4cf7-987a-07bfc13d382b, João, capuccino, true, 20, Mon Sep 29 13:08:20 GMT-03:00 2025
+4295aa58-494b-4f54-937c-b3aa534fc383, Sofia, capuccino, true, 30, Mon Sep 29 13:08:24 GMT-03:00 2025
+00ef6ba3-dbe4-4e50-b04e-d2c19af53c17, Maria, Cafe preto, true, 40, Mon Sep 29 13:08:29 GMT-03:00 2025
+27520b88-5482-4d52-bdb5-23c648d12403, Maria, Matcha, true, 50, Mon Sep 29 13:08:32 GMT-03:00 2025
+7e0789a2-9087-49ef-b452-e101bdfc2f1c, Maria, Matcha, true, 60, Mon Sep 29 13:08:35 GMT-03:00 2025
+0dc4eee0-f6e6-4163-b3c3-7d4d417a8351, Sofia, Matcha, true, 70, Mon Sep 29 13:08:39 GMT-03:00 2025
+d9e2b85c-e3fb-4887-860a-50693f23846c, Lucas, capuccino, true, 80, Mon Sep 29 13:10:08 GMT-03:00 2025
+33a590fe-a53b-46cb-b08f-5f2d0d52fa12, Pedro, Cafe latte, true, 90, Mon Sep 29 13:10:12 GMT-03:00 2025
+b5f8608f-a132-466c-bb46-7358666f817e, João, Cafe latte, true, 100, Mon Sep 29 13:10:17 GMT-03:00 2025
+2eee4015-2f3a-46c4-a144-3178eb914d07, João, Cafe latte, true, 110, Mon Sep 29 13:10:21 GMT-03:00 2025
+35e21335-146a-44d8-9c9f-01d8058fa214, Lucas, Cafe latte, true, 120, Mon Sep 29 13:10:25 GMT-03:00 2025
+3aa21fdb-680c-4f78-9f21-48bb6d284a21, João, Matcha, true, 10, Mon Sep 29 16:08:29 GMT-03:00 2025
+790067ba-1f76-43d2-944c-4dafdf7b0b05, Sofia, Matcha, true, 20, Mon Sep 29 16:08:33 GMT-03:00 2025
+96a83496-39a3-47e2-9e62-5fde7969e764, Pedro, capuccino, true, 30, Mon Sep 29 16:08:40 GMT-03:00 2025
+2bcd9045-9b24-43e1-a4c5-cae32d147b88, Lucas, Cafe latte, true, 40, Mon Sep 29 16:09:16 GMT-03:00 2025
+5a8c69d5-ef39-4890-95e5-1c8f8089b9a0, Lucas, Matcha, true, 50, Mon Sep 29 16:09:23 GMT-03:00 2025
+3ef4ba4d-d389-4833-b147-7614c5e1044a, Maria, Matcha, true, 60, Mon Sep 29 16:09:28 GMT-03:00 2025
+97b27028-2f06-4e54-8efd-cf1533d1258d, Ana, Cafe latte, true, 70, Mon Sep 29 16:09:32 GMT-03:00 2025
+b1f4961c-7a53-4be5-92d7-362bc208f389, Pedro, Cafe latte, true, 80, Mon Sep 29 16:09:37 GMT-03:00 2025
+437921ed-21e8-4786-8ff7-deaa7b61a6a5, Pedro, Cafe latte, true, 90, Mon Sep 29 16:09:43 GMT-03:00 2025
+c500ba33-1e67-4980-a4b5-0befbe7432e3, João, Cafe latte, true, 100, Mon Sep 29 16:09:46 GMT-03:00 2025
+9152bc04-19fe-4f02-825c-f982357816d1, Pedro, capuccino, true, 110, Mon Sep 29 16:09:53 GMT-03:00 2025
+8437c109-21c7-454b-878e-55be772793e3, Ana, Cafe latte, true, 120, Mon Sep 29 16:09:57 GMT-03:00 2025
+ff9808f7-28ea-4161-b15f-71d4899d5349, Sofia, capuccino, true, 130, Mon Sep 29 16:10:01 GMT-03:00 2025
+6cce9a14-390b-4eec-8f62-a20a265ddb72, Maria, Cafe preto, false, 125, Mon Sep 29 16:10:04 GMT-03:00 2025
+dad9681d-6c1a-4a0e-bd56-161c069598a3, João, Matcha, false, 120, Mon Sep 29 16:10:09 GMT-03:00 2025
+0f38faf3-af8c-421b-8da9-5924fb9b6291, Sofia, capuccino, true, 130, Mon Sep 29 16:10:14 GMT-03:00 2025
+740dd05f-1517-455c-a708-977970163ea0, Lucas, Cafe latte, true, 140, Mon Sep 29 16:10:18 GMT-03:00 2025
+b7e67468-7111-46fe-8e15-d06976733e9e, Maria, capuccino, true, 150, Mon Sep 29 16:10:23 GMT-03:00 2025
+3f5eec85-c4ea-4a12-9da4-df1261ab8b3c, Lucas, Cafe preto, false, 145, Mon Sep 29 16:10:28 GMT-03:00 2025
+963d9b78-a2b7-48a3-90bc-5b8af2470ff3, Maria, capuccino, false, 140, Mon Sep 29 16:10:31 GMT-03:00 2025
+83b17d50-ed63-42dd-9fb0-a7e2d9b8e0ab, Sofia, Cafe preto, true, 150, Mon Sep 29 16:10:34 GMT-03:00 2025
+851346b7-50e2-4cca-8cbe-1458210bab6c, Lucas, capuccino, true, 160, Mon Sep 29 16:10:38 GMT-03:00 2025
+febc97d4-f57d-4e2f-8641-4a4d977ff0d4, Maria, capuccino, true, 170, Mon Sep 29 16:10:41 GMT-03:00 2025
+24f842bb-34fb-45b2-a87b-57b43dd7c181, Ana, Cafe preto, true, 180, Mon Sep 29 16:10:45 GMT-03:00 2025
+ff53f98b-9cf3-4837-8ff4-42edc8e39de6, Lucas, Cafe latte, true, 190, Mon Sep 29 16:10:50 GMT-03:00 2025
+bb4a7ae9-0ede-41a6-9aae-b38593916a99, Lucas, Cafe latte, true, 200, Mon Sep 29 16:10:54 GMT-03:00 2025
+84764b58-f2f9-46be-a068-f938ade8db81, João, Matcha, true, 210, Mon Sep 29 16:10:57 GMT-03:00 2025
+b978446c-a7a0-4b01-b1f7-15c2fdf6d342, Pedro, Cafe preto, true, 220, Mon Sep 29 16:11:01 GMT-03:00 2025
+4d8510ec-68ac-430d-bc89-f25d062eb9d3, Ana, Cafe latte, true, 230, Mon Sep 29 16:11:11 GMT-03:00 2025
+9cc185ba-b4a4-4106-aa52-49755dc2419e, Maria, capuccino, true, 10, Mon Sep 29 16:12:36 GMT-03:00 2025
+7908db3b-e8d8-4a28-a195-a3ea6bcde2aa, Lucas, Cafe preto, true, 10, Mon Sep 29 16:15:49 GMT-03:00 2025
+f87f4bb7-7068-42c8-888e-1186a291cd37, Ana, capuccino, true, 20, Mon Sep 29 16:15:53 GMT-03:00 2025
+717ada58-46a6-40a3-9aa9-9487ac272a75, Lucas, Cafe latte, true, 30, Mon Sep 29 16:15:57 GMT-03:00 2025

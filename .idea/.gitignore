@@ -1,3 +1,53 @@
-# Default ignored files
-/shelf/
-/workspace.xml
+# ----------------------------------------
+# Arquivos Específicos Solicitados (TESTE)
+# ----------------------------------------
+
+# Regra para ignorar o arquivo de dados em qualquer subdiretório
+**/historico_pedidos.csv
+
+# Arquivos de projeto/build específicos da sua pasta
+# Cuidado: Se 'build.xml' for a sua definição de build principal, pode ser necessário versioná-lo.
+build.xml
+manifest.mf
+
+# Arquivo de módulo do IntelliJ/IDE
+cafeteria.iml
+
+# ----------------------------------------
+# 1. Pastas e Arquivos de Build Java
+# ----------------------------------------
+
+# Ignora pastas de saída de compilação
+/bin/
+/build/
+/dist/
+/target/
+
+# Ignora arquivos de classes compiladas e pacotes
+*.class
+*.jar
+*.war
+*.ear
+
+# ----------------------------------------
+# 2. Configurações de IDE (Gerais)
+# ----------------------------------------
+
+# IntelliJ e Outras IDEs baseadas em .iml
+*.iml
+*.iws
+*.ipr
+
+# Visual Studio Code
+# Configurações do workspace (pode ser necessário remover o .vscode/settings.json se quiser compartilhar)
+.vscode/
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# NetBeans
+# Pasta privada do projeto (arquivos temporários)
+/nbproject/private/
+/nbproject/build-impl.xml

@@ -2,8 +2,8 @@
 # Arquivos Específicos Solicitados (TESTE)
 # ----------------------------------------
 
-# Arquivos de dados gerados que estavam causando conflitos
-historico_pedidos.csv
+# Ignora o arquivo de dados em qualquer nível de subdiretório
+**/historico_pedidos.csv
 
 # Arquivos de projeto/build específicos da sua pasta
 # Cuidado: Se 'build.xml' for a sua definição de build principal, pode ser necessário versioná-lo.

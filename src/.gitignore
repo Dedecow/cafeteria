@@ -1,0 +1,47 @@
+# ----------------------------------------
+# 1. Arquivos de Compilação Java/IDE
+# ----------------------------------------
+
+# Ignora pastas de saída de compilação
+/bin/
+/build/
+/dist/
+
+# Ignora arquivos de classes compiladas
+*.class
+
+# ----------------------------------------
+# 2. Configurações da IDE (NetBeans, VS Code, IntelliJ)
+# ----------------------------------------
+
+# NetBeans - Comum em projetos Java (Ignora arquivos de projeto temporários/privados)
+/nbproject/private/
+/nbproject/build-impl.xml
+
+# IntelliJ/Android Studio (Arquivos de projeto)
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Visual Studio Code (Configurações de workspace)
+.vscode/
+
+# ----------------------------------------
+# 3. Arquivos Temporários de Dados
+# ----------------------------------------
+
+# Ignora arquivos de dados gerados que não devem ser versionados.
+# O Git estava protegendo 'historico_pedidos.csv' antes.
+historico_pedidos.csv
+
+# ----------------------------------------
+# 4. Outros Arquivos
+# ----------------------------------------
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos temporários
+*~

@@ -1,42 +1,40 @@
 package view;
 
+import data.MenuItem;
 import engine.Jogo;
-import java.awt.*;
+
 import javax.swing.*;
+import java.awt.*;
 
 public class TelaPreparo extends JFrame {
-    public TelaPreparo(Jogo jogo, String pedido) {
-        setTitle("JavaBeans - Preparando " + pedido);
+    public TelaPreparo(Jogo jogo, MenuItem pedido) {
+        setTitle("JavaBeans - Preparando " + pedido.getName());
         setSize(600, 400);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-        // Usa imagem específica para tela de preparo
         BackgroundPanel background = new BackgroundPanel("/assets/cafe_telapreparo_e_resultado.jpg");
-
         background.setLayout(new BorderLayout());
 
-        JLabel lblPedido = new JLabel("Preparando: " + pedido, SwingConstants.CENTER);
+        JLabel lblPedido = new JLabel("Escolha os ingredientes para: " + pedido.getName(), SwingConstants.CENTER);
         lblPedido.setFont(new Font("Arial", Font.BOLD, 18));
         lblPedido.setForeground(Color.WHITE);
 
-        JButton btnFinalizar = new JButton("Finalizar Preparo");
+        // Painel modularizado de ingredientes
+        PainelIngredientes painelIngredientes = new PainelIngredientes(pedido);
+
+        JButton btnFinalizar = new JButton("Confirmar Preparo");
         btnFinalizar.addActionListener(e -> {
             dispose();
-            jogo.processarPedido(true);
-        });
-
-        JButton btnErrar = new JButton("Errar Preparo");
-        btnErrar.addActionListener(e -> {
-            dispose();
-            jogo.processarPedido(false);
+            boolean correto = painelIngredientes.validarSelecao();
+            jogo.processarPedido(correto);
         });
 
         JPanel botoes = new JPanel();
         botoes.setOpaque(false);
         botoes.add(btnFinalizar);
-        botoes.add(btnErrar);
 
-        background.add(lblPedido, BorderLayout.CENTER);
+        background.add(lblPedido, BorderLayout.NORTH);
+        background.add(painelIngredientes, BorderLayout.CENTER);
         background.add(botoes, BorderLayout.SOUTH);
 
         setContentPane(background);

@@ -45,9 +45,9 @@ public class Jogo {
     }
     
     public void iniciarPreparo() {
-        // CORRIGIDO: O método TelaPreparo precisa apenas do nome do pedido
-        new TelaPreparo(this, this.pedidoAtual.getName());
+        new TelaPreparo(this, this.pedidoAtual);
     }
+
 
     public void processarPedido(boolean correto) {
         if (correto) {

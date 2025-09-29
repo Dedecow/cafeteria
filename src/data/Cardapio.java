@@ -27,4 +27,16 @@ public class Cardapio {
     public static List<MenuItem> getMenu() {
         return menu;
     }
+    
+    public static List<Ingrediente> getTodosIngredientes() {
+    return List.of(
+            new Ingrediente("Cafe"),
+            new Ingrediente("agua"),
+            new Ingrediente("Leite"),
+            new Ingrediente("Acucar"),
+            new Ingrediente("Cacau"),
+            new Ingrediente("matcha")
+    );
+    }
+    
 }

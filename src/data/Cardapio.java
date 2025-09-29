@@ -16,7 +16,7 @@ public class Cardapio {
     private static final List<MenuItem> menu = Arrays.asList(
             new MenuItem("Cafe preto", Arrays.asList(ingredientes.get(0), ingredientes.get(1))),
             new MenuItem("Cafe latte", Arrays.asList(ingredientes.get(0), ingredientes.get(1), ingredientes.get(2))),
-            new MenuItem("capuccino", Arrays.asList(ingredientes.get(0), ingredientes.get(2), ingredientes.get(4))),
+            new MenuItem("capuccino", Arrays.asList(ingredientes.get(0), ingredientes.get(1), ingredientes.get(2), ingredientes.get(4))),
             new MenuItem("Matcha", Arrays.asList(ingredientes.get(5), ingredientes.get(1)))
     );
 

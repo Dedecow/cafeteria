@@ -10,18 +10,20 @@ public class TelaGameOver extends JFrame {
         setSize(600, 400);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-        // Usa imagem específica para tela de game over
         BackgroundPanel background = new BackgroundPanel("/assets/cafe_telagameover.jpg");
-
         background.setLayout(new BorderLayout());
 
-        JLabel lblFim = new JLabel("☠️ Fim de jogo!", SwingConstants.CENTER);
-        JLabel lblPontos = new JLabel("Pontuação final: " + pontos, SwingConstants.CENTER);
-
-        lblFim.setFont(new Font("Arial", Font.BOLD, 24));
-        lblFim.setForeground(Color.RED);
+        // OutlineLabel aqui
+        OutlineLabel lblFim = new OutlineLabel("☠️ Fim de jogo!");
+        OutlineLabel lblPontos = new OutlineLabel("Pontuação final: " + pontos);
+        
+        // Fonte alterada para suportar emojis
+        // O nome da fonte deve estar de acordo com o sistema operacional
+        lblFim.setFont(new Font("Segoe UI Emoji", Font.BOLD, 24));
+        lblFim.setTextColor(Color.RED); 
+        
         lblPontos.setFont(new Font("Arial", Font.PLAIN, 18));
-        lblPontos.setForeground(Color.WHITE);
+        lblPontos.setTextColor(Color.WHITE); 
 
         JPanel panel = new JPanel(new GridLayout(2, 1));
         panel.setOpaque(false);
@@ -40,6 +42,5 @@ public class TelaGameOver extends JFrame {
     }
 
     public TelaGameOver(Jogo jogo, int pontos) {
-        //TODO Auto-generated constructor stub
     }
 }

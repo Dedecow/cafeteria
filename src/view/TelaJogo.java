@@ -16,7 +16,7 @@ public class TelaJogo extends JFrame {
         BackgroundPanel background = new BackgroundPanel("/assets/cafe_telajogo.jpg");
         background.setLayout(new BorderLayout());
 
-        // USE A CLASSE OutlineLabel AQUI para os dois textos
+        // Classe OutlineLabel AQUI para os dois textos
         
         OutlineLabel lblCliente = new OutlineLabel(cliente.getNome() + " pediu: " + pedido.getName());
         lblCliente.setFont(new Font("Arial", Font.BOLD, 18));

@@ -6,11 +6,11 @@ import java.util.List;
 public class Cardapio {
     private static final List<Ingrediente> ingredientes = Arrays.asList(
             new Ingrediente("Cafe"),
-            new Ingrediente("agua"),
+            new Ingrediente("Agua"),
             new Ingrediente("Leite"),
             new Ingrediente("Acucar"),
             new Ingrediente("Cacau"),
-            new Ingrediente("matcha") // Corrigido: estava "matcha" no array mas "Matcha" no item
+            new Ingrediente("Matcha") // Corrigido: estava "matcha" no array mas "Matcha" no item
     );
 
     private static final List<MenuItem> menu = Arrays.asList(
@@ -31,11 +31,11 @@ public class Cardapio {
     public static List<Ingrediente> getTodosIngredientes() {
     return List.of(
             new Ingrediente("Cafe"),
-            new Ingrediente("agua"),
+            new Ingrediente("Agua"),
             new Ingrediente("Leite"),
             new Ingrediente("Acucar"),
             new Ingrediente("Cacau"),
-            new Ingrediente("matcha")
+            new Ingrediente("Matcha")
     );
     }
     

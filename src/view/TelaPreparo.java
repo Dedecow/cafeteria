@@ -15,9 +15,10 @@ public class TelaPreparo extends JFrame {
         BackgroundPanel background = new BackgroundPanel("/assets/cafe_telapreparo_e_resultado.jpg");
         background.setLayout(new BorderLayout());
 
-        JLabel lblPedido = new JLabel("Escolha os ingredientes para: " + pedido.getName(), SwingConstants.CENTER);
+        // JLabel alterada pelo OutlineLabel
+        OutlineLabel lblPedido = new OutlineLabel("Escolha os ingredientes para: " + pedido.getName());
         lblPedido.setFont(new Font("Arial", Font.BOLD, 18));
-        lblPedido.setForeground(Color.WHITE);
+        lblPedido.setTextColor(Color.WHITE); // Use o método setTextColor
 
         // Painel modularizado de ingredientes
         PainelIngredientes painelIngredientes = new PainelIngredientes(pedido);

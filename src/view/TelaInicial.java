@@ -10,14 +10,14 @@ public class TelaInicial extends JFrame {
         setSize(600, 400);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-        // Usa imagem específica para tela inicial
         BackgroundPanel background = new BackgroundPanel("/assets/cafe_background.png");
-
         background.setLayout(new BorderLayout());
 
-        JLabel lblTitulo = new JLabel("☕ JavaBeans Cafeteria", SwingConstants.CENTER);
-        lblTitulo.setFont(new Font("Arial", Font.BOLD, 28));
-        lblTitulo.setForeground(Color.WHITE);
+        // Trocando a JLabel pelo OutlineLabel
+        OutlineLabel lblTitulo = new OutlineLabel("☕ JavaBeans Cafeteria");
+        // Fonte alterada para suportar os emojis
+        lblTitulo.setFont(new Font("Segoe UI Emoji", Font.BOLD, 28));
+        lblTitulo.setTextColor(Color.WHITE); // Use the method from your custom class
 
         JButton btnIniciar = new JButton("Iniciar Jogo");
         btnIniciar.setFont(new Font("Arial", Font.BOLD, 16));

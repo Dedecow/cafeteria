@@ -9,19 +9,21 @@ public class TelaResultado extends JFrame {
         setSize(600, 400);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-        // Usa imagem específica para tela de resultado
         BackgroundPanel background = new BackgroundPanel("/assets/cafe_telapreparo_e_resultado.jpg");
-
         background.setLayout(new BorderLayout());
 
         String msg = acerto ? "☕ Pedido correto! +10 pontos" : "❌ Pedido errado! -5 pontos";
-        JLabel lblResultado = new JLabel(msg, SwingConstants.CENTER);
-        lblResultado.setFont(new Font("Arial", Font.BOLD, 20));
-        lblResultado.setForeground(acerto ? Color.GREEN : Color.RED);
+        
+        // Substituindo os JLabels por OutlineLabels
+        OutlineLabel lblResultado = new OutlineLabel(msg);
+        
+        // Fonte alterada para suportar emojis
+        lblResultado.setFont(new Font("Segoe UI Emoji", Font.BOLD, 20));
+        lblResultado.setTextColor(acerto ? Color.GREEN : Color.RED);
 
-        JLabel lblPontos = new JLabel("Pontuação atual: " + pontos, SwingConstants.CENTER);
-        lblPontos.setFont(new Font("Arial", Font.PLAIN, 16));
-        lblPontos.setForeground(Color.WHITE);
+        OutlineLabel lblPontos = new OutlineLabel("Pontuação atual: " + pontos);
+        lblPontos.setFont(new Font("Arial", Font.PLAIN, 20));
+        lblPontos.setTextColor(Color.WHITE);
 
         JButton btnProximo = new JButton("Próximo Cliente");
         btnProximo.addActionListener(e -> {

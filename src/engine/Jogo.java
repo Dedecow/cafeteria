@@ -19,6 +19,11 @@ import view.TelaResultado;
 
 
 public class Jogo {
+    
+    // Aqui começa o código pra música tocar do começo ao fim em loop
+    // 1. Variável para controlar a música de fundo
+    private MusicPlayer backgroundMusic; 
+    
     private Random random = new Random();
     private Queue<Cliente> filaClientes = new LinkedList<>();
 
@@ -28,8 +33,34 @@ public class Jogo {
     private Cliente clienteAtual;
     private MenuItem pedidoAtual;
 
-    private IPersistencia persistencia = new PersistenciaLocal(); 
+    private IPersistencia persistencia = new PersistenciaLocal();
     //private IPersistencia persistencia = new PersistenciaTableStorage(System.getenv("STORAGE_CONNECTION_STRING"));
+
+    // Construtor: Ideal para iniciar a música assim que o jogo for instanciado
+    public Jogo() {
+        // 2. Chama o método de inicialização de áudio com o caminho corrigido.
+        // O caminho reflete: [raiz do classpath] + /assets/audio/ + [nome do arquivo]
+        String musicPath = "/assets/audio/SSvid.net--no-copyright-music-Dreamy-Mode-cute-background-music_1080.wav";
+        iniciarMusicaDeFundo(musicPath);
+    }
+    
+    // Método auxiliar para iniciar a thread da música
+    private void iniciarMusicaDeFundo(String filePath) {
+        if (backgroundMusic == null) {
+            backgroundMusic = new MusicPlayer(filePath);
+            // Inicia a música em uma thread separada para não travar o jogo
+            Thread musicThread = new Thread(backgroundMusic);
+            musicThread.start();
+        }
+    }
+    
+    // Método para parar a música e liberar recursos (importante ao fechar o jogo)
+    public void pararMusicaDeFundo() {
+        if (backgroundMusic != null) {
+            backgroundMusic.stop();
+        }
+    }
+
 
     public void iniciarJogo() {
         new TelaInicial(this);
@@ -65,6 +96,8 @@ public class Jogo {
         );
 
         if (pontos <= 0) {
+            // 3. Para a música ao entrar no Game Over
+            pararMusicaDeFundo(); 
             new TelaGameOver(pontos);
         } else {
             new TelaResultado(this, correto, pontos);

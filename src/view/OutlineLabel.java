@@ -1,3 +1,5 @@
+// Código para adicionar borda no texto de todo o jogo
+
 package view;
 
 import java.awt.*;

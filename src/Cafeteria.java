@@ -2,7 +2,7 @@
 import engine.Jogo;
 /**
  *
- * @author Dedecow, @PatrickmirandaDev, @Deboraerhart, @Leonan-Santos, @luisaVB-044
+ * @author @Dedecow, @PatrickmirandaDev, @Deboraerhart, @Leonan-Santos, @luisaVB-044
  */
 public class Cafeteria {
 

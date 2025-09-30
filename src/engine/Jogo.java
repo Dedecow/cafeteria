@@ -3,7 +3,7 @@ package engine;
 import data.model.Cliente;
 import data.model.MenuItem;
 import data.persistence.IPersistencia;
-import data.persistence.PersistenciaLocal;
+import data.persistence.PersistenciaLocal;  // Revertido para Local
 import data.setup.Cardapio;
 import data.setup.ClienteGen;
 
@@ -17,7 +17,6 @@ import view.TelaInicial;
 import view.TelaJogo;
 import view.TelaPreparo;
 import view.TelaResultado;
-
 
 public class Jogo {
     
@@ -34,7 +33,7 @@ public class Jogo {
     private Cliente clienteAtual;
     private MenuItem pedidoAtual;
 
-    private IPersistencia persistencia = new PersistenciaLocal();
+    private IPersistencia persistencia = new PersistenciaLocal();  // Revertido para Local
     //private IPersistencia persistencia = new PersistenciaTableStorage(System.getenv("STORAGE_CONNECTION_STRING"));
 
     // Construtor: Ideal para iniciar a música assim que o jogo for instanciado
@@ -62,8 +61,10 @@ public class Jogo {
         }
     }
 
-
     public void iniciarJogo() {
+        // Carrega a última pontuação ao iniciar o jogo
+        this.pontos = persistencia.carregarUltimaPontuacao();
+        System.out.println("Jogo iniciado com pontuação carregada: " + pontos);
         new TelaInicial(this);
     }
 
@@ -80,7 +81,6 @@ public class Jogo {
         new TelaPreparo(this, this.pedidoAtual);
     }
 
-
     public void processarPedido(boolean correto) {
         if (correto) {
             pontos += 10;
@@ -88,7 +88,7 @@ public class Jogo {
             pontos -= 5;
         }
 
-        //Chamada para a interface (PersistenciaLocal)
+        //Chamada para a interface (agora PersistenciaLocal)
         persistencia.salvarPedido(
             this.clienteAtual.getNome(),
             this.pedidoAtual.getName(),

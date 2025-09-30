@@ -1,5 +1,12 @@
-package data;
+package data.setup;
 import java.util.Random;
+
+import data.model.Cliente;
+import data.model.ClienteApressado;
+import data.model.ClienteCalmo;
+import data.model.ClienteExigente;
+import data.model.ClienteIndeciso;
+import data.model.MenuItem;
 
 
 

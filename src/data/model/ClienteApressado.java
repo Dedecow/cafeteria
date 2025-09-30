@@ -1,4 +1,8 @@
-package data;
+package data.model;
+
+import data.setup.ClienteGen;
+import data.setup.FrasesClientes;
+import data.setup.TipoDeCliente;
 
 public class ClienteApressado extends Cliente {
     public ClienteApressado(String nome, MenuItem pedido) {

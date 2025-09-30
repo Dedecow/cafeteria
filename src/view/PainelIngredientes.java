@@ -1,8 +1,8 @@
 package view;
 
-import data.Cardapio;
-import data.Ingrediente;
-import data.MenuItem;
+import data.model.Ingrediente;
+import data.model.MenuItem;
+import data.setup.Cardapio;
 
 import javax.swing.*;
 import java.awt.*;

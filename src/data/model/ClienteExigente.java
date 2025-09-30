@@ -1,4 +1,9 @@
-package data;
+package data.model;
+
+import data.setup.ClienteGen;
+import data.setup.FrasesClientes;
+import data.setup.TipoDeCliente;
+
 
 public class ClienteExigente extends Cliente {
     public ClienteExigente(String nome, MenuItem pedido) {

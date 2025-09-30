@@ -1,7 +1,10 @@
-package data;
+package data.setup;
 
 import java.util.Arrays;
 import java.util.List;
+
+import data.model.Ingrediente;
+import data.model.MenuItem;
 
 public class Cardapio {
     private static final List<Ingrediente> ingredientes = Arrays.asList(

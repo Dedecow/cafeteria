@@ -1,7 +1,7 @@
 package view;
 
-import data.Cliente;
-import data.MenuItem;
+import data.model.Cliente;
+import data.model.MenuItem;
 import engine.Jogo;
 import java.awt.*;
 import javax.swing.*;

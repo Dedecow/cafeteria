@@ -1,11 +1,12 @@
 package engine;
 
-import data.Cardapio;
-import data.Cliente;
-import data.ClienteGen;
-import data.IPersistencia;
-import data.MenuItem;
-import data.PersistenciaLocal;
+import data.model.Cliente;
+import data.model.MenuItem;
+import data.persistence.IPersistencia;
+import data.persistence.PersistenciaLocal;
+import data.setup.Cardapio;
+import data.setup.ClienteGen;
+
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;

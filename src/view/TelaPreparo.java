@@ -1,9 +1,11 @@
 package view;
 
-import data.MenuItem;
 import engine.Jogo;
 
 import javax.swing.*;
+
+import data.model.MenuItem;
+
 import java.awt.*;
 
 public class TelaPreparo extends JFrame {

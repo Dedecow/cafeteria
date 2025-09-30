@@ -1,4 +1,4 @@
-package data;
+package data.persistence;
 
 import java.io.FileWriter;
 import java.io.IOException;

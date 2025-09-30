@@ -1,4 +1,4 @@
-package data;
+package data.model;
 
 public abstract class Cliente {
     private String nome;

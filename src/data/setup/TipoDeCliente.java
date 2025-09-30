@@ -1,4 +1,4 @@
-package data;
+package data.setup;
 
 public enum TipoDeCliente {
     APRESSADO,

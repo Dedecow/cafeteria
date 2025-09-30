@@ -1,4 +1,4 @@
-package data;
+package data.persistence;
 /* 
 import com.azure.data.tables.TableClient;
 import com.azure.data.tables.TableServiceClient;

@@ -3,7 +3,7 @@ package engine;
 import data.model.Cliente;
 import data.model.MenuItem;
 import data.persistence.IPersistencia;
-import data.persistence.PersistenciaLocal;  // Revertido para Local
+import data.persistence.PersistenciaSQLite;  // Mude para SQLite
 import data.setup.Cardapio;
 import data.setup.ClienteGen;
 
@@ -33,7 +33,8 @@ public class Jogo {
     private Cliente clienteAtual;
     private MenuItem pedidoAtual;
 
-    private IPersistencia persistencia = new PersistenciaLocal();  // Revertido para Local
+    private IPersistencia persistencia = new PersistenciaSQLite();  // ATIVADO: Use SQLite agora
+    //private IPersistencia persistencia = new PersistenciaLocal();  // Comentado: Local como fallback
     //private IPersistencia persistencia = new PersistenciaTableStorage(System.getenv("STORAGE_CONNECTION_STRING"));
 
     // Construtor: Ideal para iniciar a música assim que o jogo for instanciado
@@ -88,7 +89,7 @@ public class Jogo {
             pontos -= 5;
         }
 
-        //Chamada para a interface (agora PersistenciaLocal)
+        //Chamada para a interface (agora PersistenciaSQLite)
         persistencia.salvarPedido(
             this.clienteAtual.getNome(),
             this.pedidoAtual.getName(),
